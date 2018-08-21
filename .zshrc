@@ -68,6 +68,7 @@ plugins=(
   tmux
   dircycle
   zsh-syntax-highlighting
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
