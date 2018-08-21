@@ -13,9 +13,8 @@ mv ~/.zshrc ~/.zshrc_$(date -I).bak
 ln -s $REP/.zshrc ~/.zshrc
 
 # Vim
-mkdir -p ~/.vim/.undo
-mkdir -p ~/.vim/.swp
-mkdir -p ~/.vim/.backup
+mkdir -p ~/.vim/.undo ~/.vim/.swp ~/.vim/.backup
+chown -R $USER:$USER ~/.vim
 mv ~/.vimrc ~/.vimrc_$(date -I).bak
 ln -s $REP/.vimrc ~/.vimrc
 
