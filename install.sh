@@ -4,7 +4,7 @@
 
 REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
-apt install -y build-essential terminator curl git vim zsh tmux htop fonts-powerline
+apt install -y build-essential fluxbox terminator curl git vim zsh tmux htop fonts-powerline
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -18,6 +18,14 @@ mkdir -p ~/.vim/.swp
 mkdir -p ~/.vim/.backup
 mv ~/.vimrc ~/.vimrc_$(date -I).bak
 ln -s $REP/.vimrc ~/.vimrc
+
+# Fluxbox
+mkdir -p ~/.fluxbox
+cat << EOF >> ~/.fluxbox/startup
+#!/bin/sh
+terminator &
+exec fluxbox
+EOF
 
 # Tmux
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
