@@ -25,6 +25,7 @@ cat << EOF >> ~/.fluxbox/startup
 terminator &
 exec fluxbox
 EOF
+chown -R $USER:$USER ~/.fluxbox
 
 # Tmux
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
