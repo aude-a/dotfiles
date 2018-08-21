@@ -22,3 +22,9 @@ ln -s ./.tmux.conf ~/.tmux.conf
 # Terminator
 mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
 ln -s ./terminator.confir ~/.config/terminator/config
+
+# Powershell
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
+apt update
+apt install -y powershell-preview
