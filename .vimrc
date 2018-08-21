@@ -65,7 +65,14 @@ set history=10000
 set backspace=indent,eol,start
 
 " Disposition de clavier Bépo
-set langmap=ba,éz,pe,or,èt,çy,vu,di,lo,fp,j^,z$,aq,us,id,ef,\\,g,ch,tj,sk,rl,nm,mù,^*,ê<,àw,yx,xc,.v,kb,'n,q\\,,g\\;,h:,f!,BA,ÉZ,PE,OR,ÈT,ÇY,VU,DI,LO,FP,J¨,Z£,AQ,US,ID,EF,?G,CH,TJ,SK,RL,NM,M%,!*,Ê>,ÀW,YX,XC,:V,KB,\\;N,QG,G.,H/,F§,@œ,_&,"é,«",»',((,)-,+è,-_,*ç,/à,=),%=,$Œ,^°,µ+,#“,{´,}~,<#,>{,[[,]|,±`,¬\,×^,÷@,¯],%}
+noremap c h
+noremap r l
+noremap t j
+noremap s k
+nnoremap <C-T> <C-W><C-J>
+nnoremap <C-S> <C-W><C-K>
+nnoremap <C-R> <C-W><C-L>
+nnoremap <C-C> <C-W><C-H>
 
 " Configuration des plugins :
 " Vim-Airline :
