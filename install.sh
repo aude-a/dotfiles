@@ -42,7 +42,18 @@ cp $REP/monaco.ttf /usr/share/fonts/truetype/monaco/
 fc-cache -f
 
 # Powershell
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
 apt update
 apt install -y powershell-preview
+
+# Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
+apt update
+apt install -y docker-ce
+groupadd docker
+usermod -aG docker $USER
