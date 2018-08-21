@@ -23,6 +23,11 @@ ln -s ./.tmux.conf ~/.tmux.conf
 mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
 ln -s ./terminator.confir ~/.config/terminator/config
 
+# Monaco font
+mkdir -p /usr/share/fonts/truetype/monaco/
+cp ./monaco.ttf /usr/share/fonts/truetype/monaco/
+fc-cache -f
+
 # Powershell
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
