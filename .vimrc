@@ -78,3 +78,5 @@ nnoremap <C-C> <C-W><C-H>
 " Vim-Airline :
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+" Git-Gutter :
+set updatetime=100 
