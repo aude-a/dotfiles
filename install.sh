@@ -4,6 +4,8 @@
 
 REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
+apt update
+apt upgrade -y
 apt install -y build-essential fluxbox terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
 
 # Oh-My-Zsh
