@@ -4,9 +4,9 @@
 
 REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
-apt update
-apt upgrade -y
-apt install -y build-essential fluxbox terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y build-essential fluxbox terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -16,7 +16,6 @@ ln -s $REP/.zshrc ~/.zshrc
 
 # Vim
 mkdir -p ~/.vim/.undo ~/.vim/.swp ~/.vim/.backup
-chown -R $USER:$USER ~/.vim
 mv ~/.vimrc ~/.vimrc_$(date -I).bak
 ln -s $REP/.vimrc ~/.vimrc
 
@@ -27,7 +26,6 @@ cat << EOF >> ~/.fluxbox/startup
 terminator &
 exec fluxbox
 EOF
-chown -R $USER:$USER ~/.fluxbox
 
 # Tmux
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
@@ -36,26 +34,27 @@ ln -s $REP/.tmux.conf ~/.tmux.conf
 
 # Terminator
 mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
+mkdir -p ~/.config/terminator
 ln -s $REP/terminator.config ~/.config/terminator/config
 
 # Monaco font
-mkdir -p /usr/share/fonts/truetype/monaco/
-cp $REP/monaco.ttf /usr/share/fonts/truetype/monaco/
-fc-cache -f
+sudo mkdir -p /usr/share/fonts/truetype/monaco/
+sudo cp $REP/monaco.ttf /usr/share/fonts/truetype/monaco/
+sudo fc-cache -f
 
 # Powershell
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
-apt update
-apt install -y powershell-preview
+sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
+sudo apt update
+sudo apt install -y powershell-preview
 
 # Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-add-apt-repository \
+sudo add-apt-repository \
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) \
   stable"
-apt update
-apt install -y docker-ce
-groupadd docker
-usermod -aG docker $USER
+sudo apt update
+sudo apt install -y docker-ce
+sudo groupadd docker
+sudo usermod -aG docker $USER
