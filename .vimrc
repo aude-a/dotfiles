@@ -86,5 +86,13 @@ set updatetime=100
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let g:NERDTreeMapChdir = 'H'
+let g:NERDTreeMapChdir = 'hd'
+let g:NERDTreeMapCWD = 'HD'
+let g:NERDTreeMapOpenInTab = 'j'
+let g:NERDTreeMapJumpLastChild = 'J'
+let g:NERDTreeMapOpenVSplit = 'k'
+let g:NERDTreeMapRefresh = 'l'
+let g:NERDTreeMapRefreshRoot = 'L'
 nnoremap ll :NERDTreeToggle<Enter>
 nnoremap le :NERDTreeFind<CR>
