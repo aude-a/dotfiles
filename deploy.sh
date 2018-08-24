@@ -35,11 +35,11 @@ ln -s $REP/.tmux.conf ~/.tmux.conf
 # Terminator
 mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
 mkdir -p ~/.config/terminator
-ln -s $REP/terminator.config ~/.config/terminator/config
+ln -s $REP/terminator/terminator.config ~/.config/terminator/config
 
 # Monaco font
 sudo mkdir -p /usr/share/fonts/truetype/monaco/
-sudo cp $REP/monaco.ttf /usr/share/fonts/truetype/monaco/
+sudo cp $REP/terminator/monaco.ttf /usr/share/fonts/truetype/monaco/
 sudo fc-cache -f
 
 # Powershell
