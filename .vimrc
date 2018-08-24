@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Couleurs
