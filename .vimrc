@@ -76,6 +76,9 @@ nnoremap <C-S> <C-W><C-K>
 nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
 
+" Double virgule équivaut à «echap»
+inoremap ,, <Esc>
+
 " Configuration des plugins :
 " Vim-Airline :
 let g:airline#extensions#tabline#enabled = 1
