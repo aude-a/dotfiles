@@ -12,12 +12,12 @@ sudo apt install -y build-essential fluxbox terminator curl git vim zsh tmux hto
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 mv ~/.zshrc ~/.zshrc_$(date -I).bak
-ln -s $REP/.zshrc ~/.zshrc
+ln -s $REP/zshrc ~/.zshrc
 
 # Vim
 mkdir -p ~/.vim/.undo ~/.vim/.swp ~/.vim/.backup
 mv ~/.vimrc ~/.vimrc_$(date -I).bak
-ln -s $REP/.vimrc ~/.vimrc
+ln -s $REP/vimrc ~/.vimrc
 
 # Fluxbox
 mkdir -p ~/.fluxbox
@@ -30,7 +30,7 @@ EOF
 # Tmux
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
 mv ~/.tmux.conf ~/.tmux.conf_$(date -I).bak
-ln -s $REP/.tmux.conf ~/.tmux.conf
+ln -s $REP/tmux.conf ~/.tmux.conf
 
 # Terminator
 mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
