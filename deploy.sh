@@ -6,7 +6,7 @@ REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y build-essential terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
+sudo apt install -y build-essential terminator curl git vim zsh tmux htop iotop iftop tree fonts-powerline
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
