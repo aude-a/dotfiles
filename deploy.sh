@@ -6,7 +6,7 @@ REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y build-essential fluxbox terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
+sudo apt install -y build-essential terminator curl git vim zsh tmux htop iotop iftop fonts-powerline
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -18,14 +18,6 @@ ln -s $REP/zshrc $HOME/.zshrc
 mkdir -p $HOME/.vim/.undo $HOME/.vim/.swp $HOME/.vim/.backup
 mv $HOME/.vimrc $HOME/.vimrc_$(date -I).bak
 ln -s $REP/vimrc $HOME/.vimrc
-
-# Fluxbox
-mkdir -p $HOME/.fluxbox
-cat << EOF >> $HOME/.fluxbox/startup
-#!/bin/sh
-terminator &
-exec fluxbox
-EOF
 
 # Tmux
 git clone https://github.com/jimeh/tmux-themepack.git $HOME/.tmux-themepack
