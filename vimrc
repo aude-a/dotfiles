@@ -77,7 +77,10 @@ nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
 
 " Double virgule équivaut à «echap»
-inoremap ,, <Esc>
+let mapleader=","
+inoremap <leader>, <Esc>
+noremap <leader>c :cprevious<CR>
+noremap <leader>r :cnext<CR>
 
 " Configuration des plugins :
 " Vim-Airline :
