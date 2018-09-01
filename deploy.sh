@@ -10,32 +10,32 @@ sudo apt install -y build-essential fluxbox terminator curl git vim zsh tmux hto
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-mv ~/.zshrc ~/.zshrc_$(date -I).bak
-ln -s $REP/zshrc ~/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+mv $HOME/.zshrc $HOME/.zshrc_$(date -I).bak
+ln -s $REP/zshrc $HOME/.zshrc
 
 # Vim
-mkdir -p ~/.vim/.undo ~/.vim/.swp ~/.vim/.backup
-mv ~/.vimrc ~/.vimrc_$(date -I).bak
-ln -s $REP/vimrc ~/.vimrc
+mkdir -p $HOME/.vim/.undo $HOME/.vim/.swp $HOME/.vim/.backup
+mv $HOME/.vimrc $HOME/.vimrc_$(date -I).bak
+ln -s $REP/vimrc $HOME/.vimrc
 
 # Fluxbox
-mkdir -p ~/.fluxbox
-cat << EOF >> ~/.fluxbox/startup
+mkdir -p $HOME/.fluxbox
+cat << EOF >> $HOME/.fluxbox/startup
 #!/bin/sh
 terminator &
 exec fluxbox
 EOF
 
 # Tmux
-git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
-mv ~/.tmux.conf ~/.tmux.conf_$(date -I).bak
-ln -s $REP/tmux.conf ~/.tmux.conf
+git clone https://github.com/jimeh/tmux-themepack.git $HOME/.tmux-themepack
+mv $HOME/.tmux.conf $HOME/.tmux.conf_$(date -I).bak
+ln -s $REP/tmux.conf $HOME/.tmux.conf
 
 # Terminator
-mv ~/.config/terminator/config ~/.config/terminator/config_$(date -I).bak
-mkdir -p ~/.config/terminator
-ln -s $REP/terminator/terminator.config ~/.config/terminator/config
+mv $HOME/.config/terminator/config $HOME/.config/terminator/config_$(date -I).bak
+mkdir -p $HOME/.config/terminator
+ln -s $REP/terminator/terminator.config $HOME/.config/terminator/config
 
 # Monaco font
 sudo mkdir -p /usr/share/fonts/truetype/monaco/
