@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Génération d'un espace de travail
 # François-Xavier Colas - 2018
 
