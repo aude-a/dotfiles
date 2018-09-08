@@ -1,5 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.bin:/usr/local/bin:$PATH
+
+# Configuration de fzf :
+export PATH=$HOME/.fzf/bin:$PATH
+source $HOME/.fzf/shell/completion.zsh
+source $HOME/.fzf/shell/key-bindings.fish
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
