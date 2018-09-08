@@ -87,6 +87,8 @@ let mapleader=","
 inoremap <leader>, <Esc>
 noremap <leader>c :cprevious<CR>
 noremap <leader>r :cnext<CR>
+noremap <leader>x :x<CR>
+noremap <leader>w :w<CR>
 
 " Configuration des plugins :
 " Vim-Airline :
