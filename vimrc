@@ -78,6 +78,10 @@ nnoremap <C-S> <C-W><C-K>
 nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
 
+" Copier-coller utilise le presse-papier du système
+noremap y "+y
+noremap p "+p
+
 " Double virgule équivaut à «echap»
 let mapleader=","
 inoremap <leader>, <Esc>
