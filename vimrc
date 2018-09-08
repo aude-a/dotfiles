@@ -22,6 +22,7 @@ Plug 'mileszs/ack.vim'
 Plug 'yggdroot/indentline'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install' }
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 " Couleurs
@@ -111,3 +112,11 @@ let g:NERDTreeMapRefresh = 'l'
 let g:NERDTreeMapRefreshRoot = 'L'
 nnoremap ll :NERDTreeToggle<Enter>
 nnoremap le :NERDTreeFind<CR>
+" Syntastic :
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
