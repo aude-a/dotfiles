@@ -4,7 +4,7 @@ export PATH=$HOME/bin:$HOME/.bin:/usr/local/bin:$PATH
 # Configuration de fzf :
 export PATH=$HOME/.fzf/bin:$PATH
 source $HOME/.fzf/shell/completion.zsh
-source $HOME/.fzf/shell/key-bindings.fish
+source $HOME/.fzf/shell/key-bindings.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
