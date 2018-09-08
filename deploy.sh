@@ -6,8 +6,9 @@ REP="$( cd "$(dirname "$0")" ; pwd -P )"
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y build-essential curl git vim zsh tmux htop iotop iftop tree fonts-powerline pass gpg
-sudo apt install -y python2.7 python3 python-pip python3-pip ruby perl npm
+sudo apt install -y build-essential curl git vim zsh tmux htop iotop iftop tree fonts-powerline pass gpg # Utilitaires
+sudo apt install -y python2.7 python3 python-pip python3-pip ruby perl npm # Languages
+sudo apt install -y shellcheck # Linters
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
