@@ -19,6 +19,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
+Plug 'yggdroot/indentline'
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 " Couleurs
