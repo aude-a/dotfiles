@@ -25,11 +25,6 @@ git clone https://github.com/jimeh/tmux-themepack.git $HOME/.tmux-themepack
 mv $HOME/.tmux.conf $HOME/.tmux.conf_$(date -I).bak
 ln -s $REP/tmux.conf $HOME/.tmux.conf
 
-# Fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-$HOME/.fzf/install
-mv $HOME/.fzf.zsh $HOME/.oh-my-zsh/custom/fzf.zsh
-
 # Terminator
 mv $HOME/.config/terminator/config $HOME/.config/terminator/config_$(date -I).bak
 mkdir -p $HOME/.config/terminator

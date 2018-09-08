@@ -21,6 +21,7 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
 Plug 'yggdroot/indentline'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install' }
 call plug#end()
 
 " Couleurs
