@@ -99,6 +99,7 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 alias llg="ls -lha | fgrep -i --color "
+alias fzgrep='grep --line-buffered --color=never -r "" * | fzf'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
