@@ -19,6 +19,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
+Plug 'yggdroot/indentline'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install' }
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 " Couleurs
@@ -76,11 +80,17 @@ nnoremap <C-S> <C-W><C-K>
 nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
 
+" Copier-coller utilise le presse-papier du système
+noremap y "+y
+noremap p "+p
+
 " Double virgule équivaut à «echap»
 let mapleader=","
 inoremap <leader>, <Esc>
 noremap <leader>c :cprevious<CR>
 noremap <leader>r :cnext<CR>
+noremap <leader>x :x<CR>
+noremap <leader>w :w<CR>
 
 " Configuration des plugins :
 " Vim-Airline :
@@ -102,3 +112,11 @@ let g:NERDTreeMapRefresh = 'l'
 let g:NERDTreeMapRefreshRoot = 'L'
 nnoremap ll :NERDTreeToggle<Enter>
 nnoremap le :NERDTreeFind<CR>
+" Syntastic :
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
