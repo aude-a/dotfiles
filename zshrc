@@ -1,14 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-<<<<<<< HEAD
 export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
-=======
-export PATH=$HOME/bin:$HOME/.bin:/usr/local/bin:$PATH
 
 # Configuration de fzf :
 export PATH=$HOME/.fzf/bin:$PATH
 source $HOME/.fzf/shell/completion.zsh
 source $HOME/.fzf/shell/key-bindings.zsh
->>>>>>> ee09358ecc89f743ca117f7dbd00c3d166ac6a51
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -109,6 +105,7 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 #
 alias llg="ls -lha | fgrep -i --color "
 alias fzgrep='grep --line-buffered --color=never -r "" * | fzf'
+alias dig='dig +noall +answer'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

@@ -23,6 +23,8 @@ Plug 'yggdroot/indentline'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install' }
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'raimondi/delimitmate'
 call plug#end()
 
 " Couleurs
@@ -80,10 +82,6 @@ nnoremap <C-S> <C-W><C-K>
 nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
 
-" Copier-coller utilise le presse-papier du système
-noremap y "+y
-noremap p "+p
-
 " Double virgule équivaut à «echap»
 let mapleader=","
 inoremap <leader>, <Esc>
@@ -91,6 +89,7 @@ noremap <leader>c :cprevious<CR>
 noremap <leader>r :cnext<CR>
 noremap <leader>x :x<CR>
 noremap <leader>w :w<CR>
+noremap <leader>q :qa!<CR>
 
 " Configuration des plugins :
 " Vim-Airline :
@@ -120,3 +119,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" NERDCommenter :
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
