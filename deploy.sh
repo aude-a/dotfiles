@@ -52,3 +52,9 @@ sudo apt update
 sudo apt install -y docker-ce
 sudo groupadd docker
 sudo usermod -aG docker "$USER"
+
+# AWSCli
+pip install awscli
+
+# Claracli
+pip install git+ssh://git@git.fr.clara.net/elie.deloumeau/claracli.git
