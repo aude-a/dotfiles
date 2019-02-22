@@ -106,6 +106,12 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 alias llg="ls -lha | fgrep -i --color "
 alias fzgrep='grep --line-buffered --color=never -r "" * | fzf'
 alias dig='dig +noall +answer'
+
+alias cctg="clara trocla get -c"
+alias ccts="clara trocla search"
+alias ccv="clara vm"
+alias ccw="clara whereis"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
