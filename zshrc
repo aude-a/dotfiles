@@ -13,7 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 DEFAULT_USER="fxcolas"
-ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -107,12 +107,23 @@ alias llg="ls -lha | fgrep -i --color "
 alias fzgrep='grep --line-buffered --color=never -r "" * | fzf'
 alias dig='dig +noall +answer'
 
+alias ccc="clara connect"
 alias cctg="clara trocla get -c"
 alias ccts="clara trocla search"
 alias ccv="clara vm"
 alias ccw="clara whereis"
 
+# Pour avoir les manpages en couleur :
+export LESS_TERMCAP_mb=$'\e[1;96m'
+export LESS_TERMCAP_md=$'\e[1;96m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt share_history
+resolvectl domain enp0s31f6 adm.fr.clara.net

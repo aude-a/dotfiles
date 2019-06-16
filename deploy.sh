@@ -6,7 +6,7 @@ REP="$( cd "$(dirname "$0")" || exit ; pwd -P )"
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y build-essential curl git vim zsh tmux htop iotop iftop tree fonts-powerline pass gpg # Utilitaires
+sudo apt install -y build-essential curl git vim zsh tmux htop iotop iftop tree whois fonts-powerline pass gpg mariadb-client lnav # Utilitaires
 sudo apt install -y python2.7 python3 python-pip python3-pip ruby perl npm # Languages
 sudo apt install -y shellcheck # Linters
 
