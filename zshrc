@@ -126,4 +126,3 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt share_history
-resolvectl domain enp0s31f6 adm.fr.clara.net
